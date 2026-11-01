@@ -1,0 +1,22 @@
+NEXUS ROLEPLAY — LOADING SCREEN
+
+CONTENU
+- index.html : page du loading screen
+- style.css : design et mise en page
+- script.js : callbacks de progression Garry's Mod
+- assets/nexus-background.png : ton image de fond originale
+- assets/music.mp3 : ajoute ici un fichier audio MP3 dont tu as les droits si tu veux activer la musique
+
+IMPORTANT : le loading screen doit être hébergé sur une adresse web publique HTTPS accessible aux joueurs.
+Garry's Mod n'héberge pas automatiquement cette page depuis le dossier du serveur.
+
+CONFIGURATION SERVEUR
+Dans garrysmod/cfg/autoexec.cfg, ajoute (en remplaçant l'adresse par l'URL publique de ton site) :
+sv_loadingurl "https://TON-SITE/loading/?steamid=%s&map=%m"
+
+Si server.cfg contient une autre ligne sv_loadingurl, supprime-la ou corrige-la pour éviter qu'elle remplace cette adresse.
+Redémarre le serveur après modification.
+
+La progression utilise les événements natifs GameDetails, SetFilesTotal, SetFilesNeeded,
+SetStatusChanged et DownloadingFile de Garry's Mod. Le nom affiché est l'identifiant Steam64
+car le callback natif ne fournit pas le nom Steam du joueur.
