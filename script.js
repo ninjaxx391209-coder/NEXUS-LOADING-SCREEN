@@ -51,7 +51,7 @@
     $('status').textContent = serverName || 'NEXUS ROLEPLAY';
 
     if (typeof volume === 'number') {
-      music.volume = Math.max(0, Math.min(1, volume));
+      music.volume = Math.min(0.3, Math.max(0, volume));
     }
   };
 
@@ -87,7 +87,7 @@
   };
 
   // Tentative de lecture automatique
-  music.volume = 0.5;
+ music.volume = 0.3;
 
   music.play()
     .then(updateMusicButton)
