@@ -39,3 +39,47 @@ h3{font:700 23px 'Barlow Condensed',sans-serif;margin:8px 0}.news-feature p{marg
 button{cursor:pointer;background:transparent;color:#83cdf8;border:1px solid #65b9ed88;padding:9px 13px;font-size:9px;font-weight:700;letter-spacing:1px}
 button:hover{background:#3c9bd522}
 @media(max-width:700px){body{padding:20px 18px;overflow:auto;min-height:100vh}.topbar{align-items:flex-start}.server-pill{font-size:8px;padding:9px}.welcome{margin:45px 0 22px}.panels{grid-template-columns:1fr}.panel{padding:17px}.loading-panel{margin-top:18px;padding:16px}.connection-row{grid-template-columns:1fr 1fr}.status{grid-column:1/-1}.bottom-row{align-items:flex-start;flex-direction:column}}
+
+.footer-actions {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+#discord-button {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  padding: 11px 16px;
+  border-radius: 7px;
+  background: #5865F2;
+  color: white;
+  font-size: 11px;
+  font-weight: 800;
+  letter-spacing: 0.5px;
+  text-decoration: none;
+  transition: 0.2s ease;
+  border: 1px solid rgba(255,255,255,0.15);
+}
+
+#discord-button:hover {
+  background: #4752C4;
+  transform: translateY(-2px);
+  box-shadow: 0 5px 20px rgba(88,101,242,0.35);
+}
+
+#discord-button span {
+  font-size: 16px;
+}
+
+@media (max-width: 700px) {
+  .bottom-row {
+    flex-wrap: wrap;
+    gap: 12px;
+  }
+
+  .footer-actions {
+    flex-wrap: wrap;
+  }
+}
